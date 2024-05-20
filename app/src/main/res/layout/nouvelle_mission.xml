@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NouvelleMission">
+
+    <TextView
+        android:id="@+id/tv_titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Nouvelle Mission"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_du"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_titre"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:text="Du :"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/et_date_debut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Date de début"
+        android:layout_below="@id/tv_titre"
+        android:layout_marginTop="32dp"
+        android:layout_toEndOf="@id/tv_du"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/tv_au"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_date_debut"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Au :"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/et_date_fin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_date_debut"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@id/tv_au"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/tv_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_date_fin"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="À :"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spinner_lieu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_date_fin"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@id/tv_a"
+        android:layout_marginStart="8dp" />
+
+    <Button
+        android:id="@+id/add_mission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/spinner_lieu"
+        android:layout_marginTop="32dp"
+        android:text="Envoyer"
+        android:onClick="addMission" />
+
+</RelativeLayout>
