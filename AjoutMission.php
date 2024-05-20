@@ -19,6 +19,7 @@ try {
         }
     }
 
+<<<<<<< HEAD
 // Récupération des paramètres GET
 $debut = $_GET['debut'];
 $fin = $_GET['fin'];
@@ -33,6 +34,19 @@ $resultat_insertion = $statement->execute([$debut, $fin, $idVille, $idSalarie]);
 
     
 
+=======
+    // Récupération des paramètres GET
+    $debut = $_GET['debut'];
+    $fin = $_GET['fin'];
+    $idSalarie = $_GET['idSalarie'];
+
+    // Requête SQL pour insérer les données dans la table des missions
+    // Nous supposons ici que l'id de la ville est déjà connu et fixe à 1
+    $idVille = 1; // Remplacez 1 par l'ID de la ville appropriée
+    $sql = "INSERT INTO missions (debut, fin, idSalarie, idVille) VALUES (?, ?, ?, ?)";
+    $statement = $connexion->prepare($sql);
+    $resultat_insertion = $statement->execute([$debut, $fin, $idSalarie, $idVille]);
+>>>>>>> da1b0ad385f790ca3388a3516f4871bad736eecd
 
     // Vérification du résultat de l'insertion
     if ($resultat_insertion) {
